@@ -1,11 +1,13 @@
 import * as React from 'react';
 import './style.css';
+import MyContext from './MyContext';
+import Child from './Child';
 
 export default function App() {
+  const data = 'Hello';
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <MyContext.Provider value={data}>
+      <Child />
+    </MyContext.Provider>
   );
 }
